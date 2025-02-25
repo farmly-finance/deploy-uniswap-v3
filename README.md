@@ -19,9 +19,9 @@ Modify hardhat.config.ts
     "hardhat": {},
     // Custom network configuration
     // Network name
-    "polygonMumbai": {
+    "base_sepolia": {
       // rpc endpoint
-      url: "https://rpc.ankr.com/polygon_mumbai",
+      url: "https://sepolia.base.org",
       // Account private key
       accounts: ["<privateKey>"]
     }

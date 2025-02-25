@@ -1,5 +1,8 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -17,15 +20,11 @@ const config: HardhatUserConfig = {
   networks: {
     local: {
       url: "http://127.0.0.1:8545",
-      accounts: [
-        "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
-      ],
+      accounts: [process.env.PRIVATE_KEY || ""],
     },
     base_sepolia: {
       url: "https://sepolia.base.org",
-      accounts: [
-        "a9a4ee7090f2d18cb9567681f9a3f4cbfcac9ff55352862dc57957187d9e466c",
-      ],
+      accounts: [process.env.PRIVATE_KEY || ""],
     },
   },
 };
